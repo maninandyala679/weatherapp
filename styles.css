@@ -1,0 +1,144 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.weather-app {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 320px;
+    max-width: 90%;
+    animation: fadeIn 1s ease-in-out;
+    color: #333;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.weather-app h1 {
+    margin-bottom: 15px;
+    font-size: 1.8em;
+    color: #333;
+}
+
+.search-bar {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+#city-input {
+    width: calc(100% - 50px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-right: 10px;
+    box-sizing: border-box;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+#city-input:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+#search-button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+#search-button:hover {
+    background-color: #0056b3;
+}
+
+.weather-info {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #e0f7fa, #ffecb3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+.weather-info h2 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    color: #ff7043;
+}
+
+.weather-info .weather-icon {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.weather-info p {
+    margin: 8px 0;
+    font-size: 1.1em;
+    color: #555;
+}
+
+.weather-info p span {
+    font-weight: bold;
+    color: #ffab40;
+}
+
+.weather-info .temperature {
+    font-size: 2em;
+    color: #ff5722;
+    margin-bottom: 10px;
+}
+
+.weather-info .description {
+    font-size: 1.2em;
+    color: #007BFF;
+}
+
+.weather-info #humidity {
+    color: #66bb6a;
+}
+
+.weather-info #wind-speed {
+    color: #8d6e63;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 400px) {
+    #city-input {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    #search-button {
+        width: 100%;
+    }
+
+    .weather-app {
+        width: 95%;
+    }
+}
